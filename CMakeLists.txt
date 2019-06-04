@@ -86,8 +86,7 @@
 # 2018-11-16 PH added PCRE2GREP_SUPPORT_CALLOUT_FORK support and tidied
 # 2019-02-16 PH hacked to avoid CMP0026 policy issue (see comments below)
 
-# Increased minimum to 2.8.0 to support newer add_test features.
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.0)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
 
 INCLUDE("cmake/HunterGate.cmake")
 HunterGate(
