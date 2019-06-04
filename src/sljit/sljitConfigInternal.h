@@ -337,9 +337,15 @@
 
 #else
 
+#if defined(__linux__)
 /* Calls __ARM_NR_cacheflush on ARM-Linux. */
 #define SLJIT_CACHE_FLUSH(from, to) \
 	__clear_cache((char*)(from), (char*)(to))
+#elif(_WIN32)
+#pragma comment(lib, "kernel32.lib")
+#define SLJIT_CACHE_FLUSH(from, to) \
+	FlushInstructionCache(GetCurrentProcess(), (void*)(from), (uintptr_t)(to - from));
+#endif
 
 #endif
 
