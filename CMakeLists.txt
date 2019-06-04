@@ -938,4 +938,12 @@ install(
 
 # }
 
+if(NOT BUILD_SHARED_LIBS)
+  foreach(x pcre2-8 pcre2-posix pcre2-16 pcre2-32)
+    if(TARGET ${x})
+      target_compile_definitions(${x} PUBLIC PCRE2_STATIC)
+    endif()
+  endforeach()
+endif()
+
 # end CMakeLists.txt
