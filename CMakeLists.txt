@@ -94,7 +94,7 @@ HunterGate(
     SHA1 "b215dc4d88cbe6cc74b5cc9fa9cdd7058775c26b"
 )
 
-PROJECT(PCRE2 C)
+PROJECT(PCRE2 VERSION 10.33)
 
 # Set policy CMP0026 to avoid warnings for the use of LOCATION in
 # GET_TARGET_PROPERTY. This should no longer be required.
