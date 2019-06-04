@@ -89,6 +89,12 @@
 # Increased minimum to 2.8.0 to support newer add_test features.
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8.0)
 
+INCLUDE("cmake/HunterGate.cmake")
+HunterGate(
+    URL "https://github.com/ruslo/hunter/archive/v0.23.186.tar.gz"
+    SHA1 "b215dc4d88cbe6cc74b5cc9fa9cdd7058775c26b"
+)
+
 PROJECT(PCRE2 C)
 
 # Set policy CMP0026 to avoid warnings for the use of LOCATION in
